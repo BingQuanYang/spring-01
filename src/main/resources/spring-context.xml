@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:u="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+
+">
+    <!--spring 核心配置文件-->
+    <!--spring 创建对象-->
+    <!--scope : singleton 单例（默认）  prototype 多个-->
+    <!--子元素 property -->
+    <!--三个属性 name 属性的名称 value 基本类型 ref 指向容器另外一个对象-->
+    <!--<bean id="user" class="com.ybq.spring.bean.User" scope="singleton" init-method="init" destroy-method="destroy">
+        <property name="password" value="111">
+
+        </property>
+        <property name="address" ref="address"></property>
+        <property name="list" ref="list">
+            &lt;!&ndash;  <list>
+                  <value>1</value>
+                  <value>2</value>
+                  <value>3</value>
+                  <value>4</value>
+              </list>&ndash;&gt;
+        </property>
+        <property name="map" ref="map">
+            &lt;!&ndash;<map>
+                <entry key="a" value="1"></entry>
+            </map>&ndash;&gt;
+        </property>
+    </bean>
+    <u:list id="list">
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+    </u:list>
+    <u:map id="map">
+        <entry key="a" value="1"/>
+    </u:map>
+    <bean id="address" class="com.ybq.spring.bean.Address">
+
+    </bean>-->
+
+    <!--开启注解注入-->
+    <context:component-scan base-package="com.ybq.spring"/>
+</beans>
